@@ -4,66 +4,180 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CatPhotoApp</title>
+    <style>
+      :root {
+        --bg: #111827;
+        --panel: #1f2937;
+        --card: #0f172a;
+        --text: #f9fafb;
+        --muted: #d1d5db;
+        --accent: #fbbf24;
+        --accent-strong: #f59e0b;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #050816 0%, var(--bg) 100%);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+
+      h1, h2, h3 {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        margin-bottom: 24px;
+      }
+
+      section {
+        background: rgba(31, 41, 55, 0.8);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 18px;
+        padding: 24px 22px;
+        margin-bottom: 24px;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
+      }
+
+      p, li, figcaption {
+        color: var(--muted);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--accent-strong);
+        text-decoration: underline;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-top: 12px;
+      }
+
+      ul, ol {
+        padding-left: 22px;
+      }
+
+      figure {
+        margin: 18px 0 0;
+        padding: 12px;
+        border-radius: 12px;
+        background: rgba(15, 23, 42, 0.6);
+      }
+
+      form {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 16px;
+      }
+
+      input[type="text"] {
+        flex: 1 1 260px;
+        min-width: 180px;
+        padding: 12px 14px;
+        border: 1px solid #475569;
+        border-radius: 10px;
+        background: #0f172a;
+        color: var(--text);
+      }
+
+      input[type="text"]::placeholder {
+        color: #94a3b8;
+      }
+
+      button {
+        padding: 12px 18px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+        color: #111827;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:hover {
+        filter: brightness(1.08);
+      }
+    </style>
   </head>
-  <body style="background-color: black; color: white; font-family: sans-serif;">
+  <body>
     <main>
-        <h1>CatPhotoApp</h1>
+      <h1>CatPhotoApp</h1>
 
-        <section>
-          <h2>Cat Photos</h2>
-          <p>
-            See more
-            <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>
-            in our gallery.
-          </p>
-          <a href="https://freecatphotoapp.com">
-            <img
-              src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
-              alt="A cute orange cat lying on its back"
-            />
-          </a>
-        </section>
+      <section>
+        <h2>Cat Photos</h2>
+        <p>
+          See more
+          <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>
+          in our gallery.
+        </p>
+        <a href="https://freecatphotoapp.com">
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="A cute orange cat lying on its back"
+          />
+        </a>
+      </section>
 
-        <section>
-          <h2>Cat Lists</h2>
-          <h3>Things cats love:</h3>
-          <ul>
-            <li>catnip</li>
-            <li>laser pointers</li>
-            <li>lasagna</li>
-          </ul>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>catnip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
 
-          <figure>
-            <img
-              src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
-              alt="A slice of lasagna on a plate"
-            />
-            <figcaption>Cats <em>love</em> lasagna.</figcaption>
-          </figure>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="A slice of lasagna on a plate"
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
 
-          <h3>Top 3 things cats hate:</h3>
-          <ol>
-            <li>flea treatment</li>
-            <li>thunder</li>
-            <li>other cats</li>
-          </ol>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
 
-          <figure>
-            <img
-              src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
-              alt="Five cats looking around a field"
-            />
-            <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
-          </figure>
-        </section>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="Five cats looking around a field"
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
 
-        <section>
-          <h2>Cat Form</h2>
-          <form action="https://freecatphotoapp.com/submit-cat-photo">
-            <input type="text" name="catphotourl" placeholder="cat photo URL" required />
-            <button type="submit">Submit</button>
-          </form>
-        </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>
